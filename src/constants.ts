@@ -12,19 +12,27 @@ export const INTRO_TEXT = {
 export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] = [
   {
     id: 'p1',
-    title: 'SmartScore Admin',
+    title: 'SmartScore ERP',
     category: 'Enterprise Architecture',
-    year: '2024',
+    year: '2023 ~ 현재',
     // Using a sleek UI dashboard mockup image
-    image: 'https://images.unsplash.com/photo-1481487484168-9b995ecc1679?q=80&w=2400&auto=format&fit=crop',
-    description: '기존의 노후화된 골프장 관리 시스템을 현대적인 웹 기술로 재설계했습니다. 복잡한 예약 및 결제 로직을 직관적인 UI로 풀어내어 업무 효율을 40% 이상 증대시켰습니다. Adapter 패턴을 도입하여 결제 모듈의 유지보수성을 극대화했습니다.',
-    role: 'Lead Frontend Engineer',
-    techStack: ['React', 'TypeScript', 'TanStack Query', 'Figma Token'],
+    image: '/erp/erp_img_01.png',
+    description: ' 골프장 운영관리의 근간으로 활용되고 있는 스마트스코어의 골프장 ERP 솔루션입니다. 골프장의 소중한 업무 정보를 안전하게 백업하고 하루 동안 쌓인 DB 정보를 최적화하며, 골프테크 솔루션 기능 연동으로 골프장에서 필요로 하는 모든 기능을 하나의 서비스로 해결할 수 있습니다. ',
+    role: 'Frontend Engineer',
+    techStack: ['Vue3', 'TypeScript', 'TanStack Query', 'Pinia'],
     detailImages: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop'
+      '/erp/erp_img_01.png',
+      '/erp/erp_img_02.png'
+    ],
+    detailSubImges: [
+      '/erp/erp_img_03.png',
+      '/erp/erp_img_04.png',
+      '/erp/erp_img_05.png',
+      '/erp/erp_img_06.png',
     ],
     span: 'md:col-span-2', // Wide item
-    aspectRatio: 'aspect-[16/9]'
+    aspectRatio: 'aspect-[16/9]',
+    link: 'https://smartscore-erp.smartscore.global/ko'
   },
   {
     id: 'p2',
@@ -32,7 +40,7 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
     category: 'Mobile Experience',
     year: '2022',
     // Abstract mobile UI vibe
-    image: 'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2000&auto=format&fit=crop',
+    image: '/erp/erp_img_012.png',
     description: '2030 세대를 타겟으로 한 직관적인 채용 플랫폼입니다. 모바일 퍼스트 디자인을 적용하여 접근성을 높였으며, 지원 절차를 간소화하여 지원율을 기존 대비 2배 이상 끌어올렸습니다.',
     role: 'Frontend Developer & UI Designer',
     techStack: ['Vue.js', 'SCSS', 'AWS S3'],
@@ -46,7 +54,7 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
     category: 'Interactive 3D',
     year: '2023',
     // 3D abstract shape
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop',
+    image: '/erp/erp_img_04.png',
     description: 'WebGL과 3D 요소를 활용하여 개인의 아이덴티티를 표현한 포트폴리오 사이트입니다. 성능 최적화를 위해 텍스처 압축 및 레이지 로딩 기법을 적극 활용했습니다.',
     role: 'Solo Developer',
     techStack: ['Three.js', 'React', 'GSAP'],
@@ -59,7 +67,7 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
     category: 'Data Visualization',
     year: '2023',
     // Dark data viz vibe
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop',
+    image: '/erp/erp_img_04.png',
     description: '실시간 골프 경기 데이터를 시각화하여 보여주는 대시보드입니다. 대량의 데이터를 효과적으로 렌더링하기 위해 가상화 리스트(Virtualization) 기술을 적용했습니다.',
     role: 'Frontend Engineer',
     techStack: ['Next.js', 'D3.js', 'Socket.io'],

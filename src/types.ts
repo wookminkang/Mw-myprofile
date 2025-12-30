@@ -22,4 +22,5 @@ export interface Project {
   link?: string;
   role: string;
   detailImages?: string[]; // Optional additional images for detail view
+  detailSubImges?: string[];
 }
