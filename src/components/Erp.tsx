@@ -33,11 +33,14 @@ export function Erp ({onClick}: {onClick:() => void}) {
                     <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-mono text-gray-300">
                       TanStack Query
                     </span>
+                    <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm font-mono text-gray-300">
+                    웹프론트 5명, 백엔드 6명
+                    </span>
                 </div>
               </div>
 
               {/* Grid Layout for Detail */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                  {/* Left: Info */}
                  <div className="lg:col-span-4 space-y-12">
                     <div>
@@ -47,11 +50,12 @@ export function Erp ({onClick}: {onClick:() => void}) {
                     <div>
                       <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Year</h4>
                       <p className="text-2xl font-light">2023 ~ 현재</p>
-                    </div>
+                      <p className='ext-xs tracking-widest text-gray-500 mb-3'>웹프론트 5명, 백엔드 6명</p> 
+                    </div> 
                     <div>
                       <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Description</h4>
                       <p className="text-lg text-gray-400 leading-relaxed">
-                      골프장 운영관리의 근간으로 활용되고 있는 스마트스코어의 골프장 ERP 솔루션입니다. 골프장의 소중한 업무 정보를 안전하게 백업하고 하루 동안 쌓인 DB 정보를 최적화하며, 골프테크 솔루션 기능 연동으로 골프장에서 필요로 하는 모든 기능을 하나의 서비스로 해결할 수 있습니다.
+                        골프장 운영관리의 근간으로 활용되고 있는 스마트스코어의 골프장 ERP 솔루션입니다. 골프장의 소중한 업무 정보를 안전하게 백업하고 하루 동안 쌓인 DB 정보를 최적화하며, 골프테크 솔루션 기능 연동으로 골프장에서 필요로 하는 모든 기능을 하나의 서비스로 해결할 수 있습니다.
                       </p>
                     </div>
 
@@ -67,7 +71,7 @@ export function Erp ({onClick}: {onClick:() => void}) {
                  </div>
 
                     <div className="lg:col-span-8 space-y-8">
-                        <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
+                        <div className="w-full overflow-hidden rounded-lg bg-gray-900">
                            <Image 
                              src="/erp/erp_img_01.png"
                              className="w-full h-full object-cover"
@@ -81,13 +85,13 @@ export function Erp ({onClick}: {onClick:() => void}) {
                             />
                         </div>
 
-                        <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
+                        <div className="w-full overflow-hidden rounded-lg bg-gray-900">
                            <Image 
                              src="/erp/erp_img_02.png"
                              className="w-full h-full object-cover"
                              alt="Detail view"
-                             width={800}
-                             height={500}
+                             width={1400}
+                             height={800}
                              style={{
                               width: '100%',
                               height: 'auto'
@@ -98,7 +102,7 @@ export function Erp ({onClick}: {onClick:() => void}) {
                     
                     
                         <div className='lg:col-span-12 space-y-12'>
-                          <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
+                          <div className="w-full overflow-hidden rounded-lg bg-gray-900">
                               <Image 
                                 src="/erp/erp_img_03.png"
                                 className="w-full h-full object-cover"
@@ -108,13 +112,13 @@ export function Erp ({onClick}: {onClick:() => void}) {
                                 style={{
                                   width: '100%',
                                   height: 'auto'
-                                }}
+                                }} 
                               />
                           </div>
                         </div>
 
                         <div className='lg:col-span-6 space-y-6'>
-                          <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
+                          <div className="w-full overflow-hidden rounded-lg bg-gray-900">
                             
                               <Image 
                                 src="/erp/erp_img_04.png"
@@ -132,7 +136,7 @@ export function Erp ({onClick}: {onClick:() => void}) {
                         </div>
 
                         <div className='lg:col-span-6 space-y-6'>
-                          <div className="aspect-video w-full overflow-hidden rounded-lg bg-gray-900">
+                          <div className="w-full overflow-hidden rounded-lg bg-gray-900">
                           
                               <Image 
                                 src="/erp/erp_img_05.png"
@@ -144,6 +148,21 @@ export function Erp ({onClick}: {onClick:() => void}) {
                                   width: '100%',
                                   height: 'auto'
                                 }}
+                              />
+                          </div>
+                        </div>
+                        <div className='lg:col-span-12 space-y-12'>
+                          <div className="w-full overflow-hidden rounded-lg bg-gray-900">
+                              <Image 
+                                src="/erp/erp_img_06.png"
+                                className="w-full h-full object-cover"
+                                alt="Detail view"
+                                width={1500}
+                                height={700}
+                                style={{
+                                  width: '100%',
+                                  height: 'auto'
+                                }} 
                               />
                           </div>
                         </div>

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -17,16 +18,25 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Overlay Text */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-end pb-24 px-6 md:px-12 pointer-events-none">
-        <div className="max-w-7xl mx-auto w-full">
-          <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-[#1A1A1A] mb-4 drop-shadow-sm">
-            Say hello to <br/> Minwook.
+      <div className="absolute inset-0 z-10 pointer-events-none flex flex-col items-center justify-end pb-32 md:pb-24 bg-gradient-to-t from-stone-50/20 via-transparent to-transparent">
+        <div className="text-center space-y-6 max-w-2xl px-6 animate-fade-in-up">
+           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 backdrop-blur border border-stone-200 shadow-sm pointer-events-auto">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span className="text-xs font-semibold tracking-wide uppercase text-stone-600">
+              Portfolio Beta
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-stone-900 drop-shadow-sm text-white">
+            Hello!
           </h1>
-          <p className="text-lg md:text-xl text-[#4A4A4A] max-w-xl font-medium leading-relaxed drop-shadow-sm">
-             Built for complex logic, optimized for human experience. 
-             <br/>
-             Your next Senior Frontend Engineer.
+          <p className="text-lg md:text-xl text-stone-700 font-medium leading-relaxed drop-shadow-sm">
+            The helpful home robot designed to give you back what matters most—your time.
           </p>
+           <div className="flex items-center justify-center gap-4 pt-4 pointer-events-auto">
+            <button className="px-8 py-3 bg-black text-white rounded-full font-medium hover:bg-stone-800 transition-all shadow-lg hover:shadow-xl">
+              Join the Waitlist
+            </button>
+          </div>
         </div>
       </div>
 

@@ -36,14 +36,14 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
   },
   {
     id: 'p2',
-    title: 'Recruit Platform',
+    title: 'SmartScore Platform',
     category: 'Mobile Experience',
-    year: '2022',
+    year: '2023 ~ 현재',
     // Abstract mobile UI vibe
-    image: '/erp/erp_img_012.png',
-    description: '2030 세대를 타겟으로 한 직관적인 채용 플랫폼입니다. 모바일 퍼스트 디자인을 적용하여 접근성을 높였으며, 지원 절차를 간소화하여 지원율을 기존 대비 2배 이상 끌어올렸습니다.',
+    image: '/platform/platform_img_01.png',
+    description: '360만명 이상의 골퍼들의 활동을 기반으로하여, 개인화형 맞춤 추천 서비스를 통해 `나를 향한` 재미로 가득한 All-in-One 골프 플랫폼입니다.',
     role: 'Frontend Developer & UI Designer',
-    techStack: ['Vue.js', 'SCSS', 'AWS S3'],
+    techStack: ['Vue2', 'JavaScript', 'AWS S3'],
     link: 'https://example.com',
     span: 'md:col-span-1', // Tall item
     aspectRatio: 'aspect-[3/4]'
@@ -54,7 +54,7 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
     category: 'Interactive 3D',
     year: '2023',
     // 3D abstract shape
-    image: '/erp/erp_img_04.png',
+    image: '',
     description: 'WebGL과 3D 요소를 활용하여 개인의 아이덴티티를 표현한 포트폴리오 사이트입니다. 성능 최적화를 위해 텍스처 압축 및 레이지 로딩 기법을 적극 활용했습니다.',
     role: 'Solo Developer',
     techStack: ['Three.js', 'React', 'GSAP'],
@@ -67,7 +67,7 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
     category: 'Data Visualization',
     year: '2023',
     // Dark data viz vibe
-    image: '/erp/erp_img_04.png',
+    image: '',
     description: '실시간 골프 경기 데이터를 시각화하여 보여주는 대시보드입니다. 대량의 데이터를 효과적으로 렌더링하기 위해 가상화 리스트(Virtualization) 기술을 적용했습니다.',
     role: 'Frontend Engineer',
     techStack: ['Next.js', 'D3.js', 'Socket.io'],

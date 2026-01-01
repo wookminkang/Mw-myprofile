@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
+import CultureFit from "@/components/CultureFit";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <Work />
+        <CultureFit />
         
         {/* Profile Section Wrapper */}
         <div id="profile" className="relative bg-white pt-20 rounded-t-[3rem] shadow-xl z-10">

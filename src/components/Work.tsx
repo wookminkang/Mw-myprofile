@@ -6,6 +6,7 @@ import { Project } from '@/types';
 import { ArrowUpRight, X, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { Erp } from './Erp';
+import { Platform } from './Platform';
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
@@ -104,9 +105,15 @@ const Work = () => {
       <div 
         className={`fixed inset-0 z-[60] bg-[#0a0a0a] transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${selectedProject ? 'translate-y-0' : 'translate-y-full'}`}
       >
-        {selectedProject && (
+        {selectedProject.id === 'p1' && (
+         
           <Erp onClick={handleSetProject}/>
         )}
+
+        {selectedProject.id === 'p2' && (
+         
+         <Platform onClick={handleSetProject}/>
+       )}
       </div>
     </section>
   );
