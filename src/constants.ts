@@ -46,20 +46,20 @@ export const PROJECTS_DATA: (Project & { span: string, aspectRatio: string })[] 
     techStack: ['Vue2', 'JavaScript', 'AWS S3'],
     link: 'https://example.com',
     span: 'md:col-span-1', // Tall item
-    aspectRatio: 'aspect-[3/4]'
+    aspectRatio: 'aspect-[4/4]'
   },
   {
     id: 'p3',
-    title: 'Identity v1',
+    title: 'ERP App',
     category: 'Interactive 3D',
-    year: '2023',
+    year: '2023 ~ 현재',
     // 3D abstract shape
-    image: '',
+    image: '/erpapp/erpapp_img_01.png',
     description: 'WebGL과 3D 요소를 활용하여 개인의 아이덴티티를 표현한 포트폴리오 사이트입니다. 성능 최적화를 위해 텍스처 압축 및 레이지 로딩 기법을 적극 활용했습니다.',
     role: 'Solo Developer',
     techStack: ['Three.js', 'React', 'GSAP'],
     span: 'md:col-span-1',
-    aspectRatio: 'aspect-[3/4]'
+    aspectRatio: 'aspect-[4/4]'
   },
   {
     id: 'p4',

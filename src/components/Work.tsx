@@ -7,6 +7,7 @@ import { ArrowUpRight, X, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { Erp } from './Erp';
 import { Platform } from './Platform';
+import { ErpFlatform } from './ErpFlatform';
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
@@ -88,7 +89,7 @@ const Work = () => {
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">{project.title}</h3>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <span className="text-sm font-mono border border-gray-700 rounded-full px-3 py-1">{project.year}</span>
-                    <span className="text-base font-light">{project.category}</span>
+                    {/* <span className="text-base font-light">{project.category}</span> */}
                   </div>
                 </div>
               </div>
@@ -105,15 +106,17 @@ const Work = () => {
       <div 
         className={`fixed inset-0 z-[60] bg-[#0a0a0a] transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${selectedProject ? 'translate-y-0' : 'translate-y-full'}`}
       >
-        {selectedProject.id === 'p1' && (
-         
+        {selectedProject?.id === 'p1' && (
           <Erp onClick={handleSetProject}/>
         )}
 
-        {selectedProject.id === 'p2' && (
-         
+        {selectedProject?.id === 'p2' && (
          <Platform onClick={handleSetProject}/>
-       )}
+        )}
+
+        {selectedProject?.id === 'p3' && (
+         <ErpFlatform onClick={handleSetProject}/>
+        )}
       </div>
     </section>
   );

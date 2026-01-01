@@ -1,12 +1,12 @@
-import React from "react";
-import { 
-  MessageSquareQuote, 
-  HeartHandshake, 
-  CheckCircle2, 
-  GitMerge, 
-  Layers, 
-  LucideIcon 
-} from "lucide-react";
+import React from 'react';
+import {
+  MessageSquareQuote,
+  HeartHandshake,
+  CheckCircle2,
+  GitMerge,
+  Layers,
+  LucideIcon,
+} from 'lucide-react';
 
 // --- 타입 정의 ---
 interface CardProps {
@@ -18,11 +18,11 @@ interface CardProps {
 }
 
 // --- 카드 컴포넌트 ---
-const CultureCard = ({ title, description, icon: Icon, tags, className = "" }: CardProps) => {
+const CultureCard = ({ title, description, icon: Icon, tags, className = '' }: CardProps) => {
   return (
     <div
       className={`
-        group relative overflow-hidden rounded-3xl border border-gray-200 bg-[#0a0a0a] p-8 
+        group relative overflow-hidden rounded-3xl border border-gray-200 bg-[#1b1b1b] p-8 
         transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/30 hover:bg-[#1a1a1a] hover:shadow-2xl hover:shadow-orange-900/20
         ${className} text-white
       `}
@@ -37,15 +37,13 @@ const CultureCard = ({ title, description, icon: Icon, tags, className = "" }: C
         </div>
 
         {/* 텍스트 영역 */}
-        <h3 className="mb-3 text-4xl font-bold text-white transition-colors group-hover:text-white">
+        <h3 className="mb-3 text-3xl font-bold text-white transition-colors group-hover:text-white">
           {title}
         </h3>
-        <div 
+        <div
           className="mb-8 flex-grow text-xl leading-relaxed text-gray-300 transition-colors group-hover:text-zinc-300"
-          dangerouslySetInnerHTML={{ __html: description }} 
+          dangerouslySetInnerHTML={{ __html: description }}
         />
-
-        
       </div>
     </div>
   );
@@ -54,16 +52,18 @@ const CultureCard = ({ title, description, icon: Icon, tags, className = "" }: C
 // --- 메인 섹션 ---
 export default function CultureFitSection() {
   return (
-    <section className="w-full bg-white px-4 py-24 text-zinc-100">
+    <section className="w-full bg-white px-6 py-24 text-zinc-100" id="Cultuer Fit">
       <div className="mx-auto max-w-[1600px]">
         {/* 헤더 */}
         <div className="mb-16 text-left">
-          <h2 className="text-6xl md:text-[10rem] font-bold tracking-tighter leading-[0.85] text-black">Culture<br/> <span className="text-gray-500">Fit</span></h2>
+          <h2 className="text-6xl md:text-[10rem] font-bold tracking-tighter leading-[0.85] text-black">
+            Culture
+            <br /> <span className="text-gray-500">Fit</span>
+          </h2>
         </div>
 
         {/* 그리드 레이아웃 */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-12 lg:grid-cols-12">
-          
           {/* 1. 커뮤니케이션 (강조: 2칸 차지) */}
           <CultureCard
             className="md:col-span-12"
@@ -99,7 +99,6 @@ export default function CultureFitSection() {
               • 모든 주변동료들에게 배우는 자세를 가지며 지속적인 기술을 학습하고 적용
             `}
           />
-
         </div>
       </div>
     </section>
