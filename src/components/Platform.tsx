@@ -109,6 +109,40 @@ export function Platform({ onClick }: { onClick: () => void }) {
                       ></path>
                     </svg>
                   </span>
+                  <span className="text-gray-300 text-base">[골프리그] 서비스 담당</span>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <span data-icon="check">
+                    <svg
+                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span className="text-gray-300 text-base">[중고마켓] 서비스 담당</span>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <span data-icon="check">
+                    <svg
+                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
                   <span className="text-gray-300 text-base">마켓 서비스 도메인 분리 및 모듈화</span>
                 </div>
                 <div className="flex items-start gap-2">
@@ -144,7 +178,8 @@ export function Platform({ onClick }: { onClick: () => void }) {
                     </svg>
                   </span>
                   <span className="text-gray-300 text-base">
-                    [비즈니스 로직/아키텍처] Funnel 패턴과 zod Scheme 모듈화 다중 폼 설계
+                    [비즈니스 로직/아키텍처] 골프리그 참가신청에 복잡한 비즈니스 로직을 Funnel
+                    패턴과 zod Scheme 모듈화 다중 폼 설계
                   </span>
                 </div>
               </div>

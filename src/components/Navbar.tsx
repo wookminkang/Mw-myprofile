@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,31 +43,31 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-10 text-sm font-medium">
             <button
               onClick={() => scrollToSection('work')}
-              className="hover:opacity-60 transition-opacity font-semibold tracking-widest"
+              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Work
             </button>
             <button
               onClick={() => scrollToSection('Cultuer Fit')}
-              className="hover:opacity-60 transition-opacity font-semibold tracking-widest"
+              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Cultuer Fit
             </button>
             <button
               onClick={() => scrollToSection('Inter View')}
-              className="hover:opacity-60 transition-opacity font-semibold tracking-widest"
+              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Inter View
             </button>
             <button
               onClick={() => scrollToSection('profile')}
-              className="hover:opacity-60 transition-opacity font-semibold tracking-widest"
+              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Profile
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="hover:opacity-60 transition-opacity font-semibold tracking-widest"
+              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Contact
             </button>
@@ -91,19 +90,19 @@ const Navbar = () => {
       >
         <button
           onClick={() => scrollToSection('work')}
-          className="text-3xl font-bold text-white hover:opacity-60"
+          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
         >
           WORK
         </button>
         <button
           onClick={() => scrollToSection('profile')}
-          className="text-3xl font-bold text-white hover:opacity-60"
+          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
         >
           PROFILE
         </button>
         <button
           onClick={() => scrollToSection('contact')}
-          className="text-3xl font-bold text-white hover:opacity-60"
+          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
         >
           CONTACT
         </button>

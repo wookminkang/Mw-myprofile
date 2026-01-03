@@ -17,7 +17,7 @@ export default function Home() {
 
       <main>
         {/* <Hero /> */}
-        <HeroTwo />
+        {/* <HeroTwo /> */}
         <Work />
         <CultureFit />
         <Interview />
