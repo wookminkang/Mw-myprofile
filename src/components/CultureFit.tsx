@@ -37,11 +37,11 @@ const CultureCard = ({ title, description, icon: Icon, tags, className = '' }: C
         </div>
 
         {/* 텍스트 영역 */}
-        <h3 className="mb-3 text-3xl font-bold text-white transition-colors group-hover:text-white">
+        <h3 className="mb-3 text-2xl font-bold text-white transition-colors group-hover:text-white">
           {title}
         </h3>
         <div
-          className="mb-8 flex-grow text-xl leading-relaxed text-gray-300 transition-colors group-hover:text-zinc-300"
+          className="mb-8 flex-grow text-lg leading-relaxed text-gray-300 transition-colors group-hover:text-zinc-300"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
@@ -70,7 +70,7 @@ export default function CultureFitSection() {
             title="가치관 및 성향"
             icon={MessageSquareQuote}
             description={`
-            개발팀 간 소통이 필요할때는 전문분야의 언어가 아닌 중립의 언어 (시퀀스 다이어그램이나 아키텍처 도면)를 사용하여 모두가 이해할 수 있는 방향을 제시합니다. <br />
+            개발팀 간 소통이 필요할때는 전문분야의 언어가 아닌 중립의 언어 (다이어그램이나 아키텍처 도면)를 사용하여 모두가 이해할 수 있는 방향을 제시합니다. <br />
             기획, 디자이너와의 논의에서도 개발자의 언어가 아닌 비개발자의 언어를 사용하여 상대방을 이해시키고 최선의 선택을 할 수 있도록 리드합니다. <br />
             현장에서 고생하는 운영팀의 어려움을 이해하고 항상 고객을 대하는 마음으로 최대한 운영팀의 요구사항을 맞추기 위해 최선의 노력을 다합니다.
             `}
@@ -84,7 +84,6 @@ export default function CultureFitSection() {
             description={`
             • Jira 타임라인, 스프린트를 활용한 체계적인 일정 관리 <br />
             • Git Repository Fork, Pull Request 기반 코드 리뷰 프로세스 <br />
-            • Confluence기반 설계부터 개발, 체크리스트까지 적극적인 문서화
             `}
           />
 
@@ -94,7 +93,7 @@ export default function CultureFitSection() {
             title="개발 철학"
             icon={CheckCircle2}
             description={`
-              • UML 다이어그램을 적극 활용하여 개발 시작 전 명확한 아키텍처 설계, <br />
+              • Figjam 다이어그램을 적극 활용하여 개발 시작 전 명확한 아키텍처 설계, <br />
               • Clean Architecture 기반 설계 선호 (프로젝트 규모에 맞춰), <br />
               • 모든 주변동료들에게 배우는 자세를 가지며 지속적인 기술을 학습하고 적용
             `}
