@@ -1,7 +1,7 @@
-import { X } from 'lucide-react';
+import { X, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 
-export function Platform({ onClick }: { onClick: () => void }) {
+export function Platform({ modalHide }: { modalHide: () => void }) {
   return (
     <div className="h-full w-full overflow-y-auto hide-scrollbar text-white">
       {/* Modal Header/Nav */}
@@ -10,8 +10,8 @@ export function Platform({ onClick }: { onClick: () => void }) {
           SmartScore Platform
         </span>
         <button
-          onClick={onClick}
-          className="bg-white/10 backdrop-blur-md p-4 rounded-full hover:bg-white/20 transition pointer-events-auto border border-white/10 group"
+          onClick={modalHide}
+          className="cursor-pointer bg-white/10 backdrop-blur-md p-4 rounded-full hover:bg-white/20 transition pointer-events-auto border border-white/10 group"
         >
           <X className="w-6 h-6 text-white transition-transform group-hover:rotate-90" />
         </button>
@@ -97,67 +97,27 @@ export function Platform({ onClick }: { onClick: () => void }) {
               <div className="flex flex-col gap-3">
                 <div className="flex items-start gap-2">
                   <span data-icon="check">
-                    <svg
-                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   </span>
                   <span className="text-gray-300 text-base">[골프리그] 서비스 담당</span>
                 </div>
 
                 <div className="flex items-start gap-2">
                   <span data-icon="check">
-                    <svg
-                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   </span>
                   <span className="text-gray-300 text-base">[중고마켓] 서비스 담당</span>
                 </div>
 
                 <div className="flex items-start gap-2">
                   <span data-icon="check">
-                    <svg
-                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   </span>
                   <span className="text-gray-300 text-base">마켓 서비스 도메인 분리 및 모듈화</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span data-icon="check">
-                    <svg
-                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   </span>
                   <span className="text-gray-300 text-base">
                     [성능 최적화] 데이터 특성에 맞춘 캐싱 및 렌더링 전략
@@ -165,17 +125,7 @@ export function Platform({ onClick }: { onClick: () => void }) {
                 </div>
                 <div className="flex items-start gap-2">
                   <span data-icon="check">
-                    <svg
-                      className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                   </span>
                   <span className="text-gray-300 text-base">
                     [비즈니스 로직/아키텍처] 골프리그 참가신청에 복잡한 비즈니스 로직을 Funnel
@@ -208,7 +158,7 @@ export function Platform({ onClick }: { onClick: () => void }) {
       <div className="fixed bottom-0 left-0 w-full p-6 text-center pointer-events-none">
         <div
           className="inline-block bg-white/10 backdrop-blur-md px-6 py-2 rounded-full cursor-pointer pointer-events-auto hover:bg-white/20 transition border border-white/10"
-          onClick={onClick}
+          onClick={modalHide}
         >
           <span className="text-sm font-bold text-white uppercase tracking-widest">Close</span>
         </div>

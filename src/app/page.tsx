@@ -22,12 +22,12 @@ export default function Home() {
         <CultureFit />
         <Interview />
 
-        {/* Profile Section Wrapper */}
+        {/* Profile Section Wrapper
         <div id="profile" className="relative bg-white pt-20 rounded-t-[3rem] shadow-xl z-10">
           <About />
           <Experience />
           <Skills />
-        </div>
+        </div> */}
       </main>
 
       <Footer />
