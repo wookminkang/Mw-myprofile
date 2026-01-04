@@ -1,24 +1,17 @@
 import React from 'react';
-import {
-  MessageSquareQuote,
-  HeartHandshake,
-  CheckCircle2,
-  GitMerge,
-  Layers,
-  LucideIcon,
-} from 'lucide-react';
+import { MessageSquareQuote, HeartHandshake, CheckCircle2, LucideIcon } from 'lucide-react';
+import { SECTION_IDS } from '@/constants';
 
 // --- 타입 정의 ---
 interface CardProps {
   title: string;
   description: string;
   icon: LucideIcon;
-  tags?: string[];
   className?: string; // col-span 처리를 위해 추가
 }
 
 // --- 카드 컴포넌트 ---
-const CultureCard = ({ title, description, icon: Icon, tags, className = '' }: CardProps) => {
+const CultureCard = ({ title, description, icon: Icon, className = '' }: CardProps) => {
   return (
     <div
       className={`
@@ -52,7 +45,7 @@ const CultureCard = ({ title, description, icon: Icon, tags, className = '' }: C
 // --- 메인 섹션 ---
 export default function CultureFitSection() {
   return (
-    <section className="w-full bg-white px-6 py-24 text-zinc-100" id="Cultuer Fit">
+    <section className="w-full bg-white px-6 py-24 text-zinc-100" id={SECTION_IDS.CULTURE_FIT}>
       <div className="mx-auto max-w-[1600px]">
         {/* 헤더 */}
         <div className="mb-16 text-left">

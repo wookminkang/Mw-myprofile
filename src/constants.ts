@@ -1,4 +1,10 @@
-import { ExperienceItem, SkillCategory, Project } from './types';
+import {
+  ExperienceItem,
+  ExperienceCompany,
+  SkillCategory,
+  Project,
+  ProjectWithLayout,
+} from './types';
 
 export const INTRO_TEXT = {
   greeting: "Hello, I'm Minwook.",
@@ -10,7 +16,7 @@ export const INTRO_TEXT = {
 };
 
 // Added 'span' property to control grid sizing (col-span-1 vs col-span-2)
-export const PROJECTS_DATA: (Project & { span: string; aspectRatio: string })[] = [
+export const PROJECTS_DATA: ProjectWithLayout[] = [
   {
     id: 'p1',
     title: 'SmartScore ERP',
@@ -32,6 +38,17 @@ export const PROJECTS_DATA: (Project & { span: string; aspectRatio: string })[] 
     span: 'md:col-span-2', // Wide item
     aspectRatio: 'aspect-[16/9]',
     link: 'https://smartscore-erp.smartscore.global/ko',
+    detailTitle: '스마트스코어 골프장 ERP 솔루션 신규개발',
+    period: '2023.03 - 현재',
+    team: '프론트엔드 4명, 백엔드 5명, 디자이너 3명',
+    features: [
+      'i18n 다국어 지원 시스템 구축',
+      'TanStack Query를 활용한 서버 상태 관리 및 캐싱 전략 수립',
+      'Pinia를 이용한 전역 상태 관리 및 모듈화',
+      'TypeScript strict mode 적용으로 타입 안정성 확보',
+      'ERP 디자인 시스템 고도화 및 핵심 컴포넌트 재구축',
+    ],
+    kind: 'prod',
   },
   {
     id: 'p2',
@@ -42,11 +59,24 @@ export const PROJECTS_DATA: (Project & { span: string; aspectRatio: string })[] 
     image: '/platform/platform_img_01.png',
     description:
       '360만명 이상의 골퍼들의 활동을 기반으로하여, 개인화형 맞춤 추천 서비스를 통해 `나를 향한` 재미로 가득한 All-in-One 골프 플랫폼입니다.',
-    role: 'Frontend Developer & UI Designer',
+    role: 'Frontend Engineer',
     techStack: ['Vue2', 'JavaScript', 'AWS S3'],
     link: 'https://example.com',
     span: 'md:col-span-1', // Tall item
     aspectRatio: 'aspect-[4/4]',
+    detailImages: ['/platform/platform_img_01.png'],
+    detailSubImges: ['/platform/platform_img_02.png'],
+    detailTitle: '스마트스코어 플랫폼 모바일 앱 고도화',
+    period: '2023.01 - 현재',
+    team: '프론트엔드 3명, 백엔드 5명, 디자이너 1명',
+    features: [
+      'Vue2 기반 하이브리드 웹앱 개발',
+      '실시간 골프장 정보 및 예약 시스템 연동',
+      '모바일 반응형 디자인 구현',
+      '마켓/골프리그 서비스 담당',
+      '골프리그 참가 신청 및 관리 시스템 개발',
+    ],
+    kind: 'prod',
   },
   {
     id: 'p3',
@@ -55,26 +85,108 @@ export const PROJECTS_DATA: (Project & { span: string; aspectRatio: string })[] 
     year: '2023 ~ 현재',
     // 3D abstract shape
     image: '/erpapp/erpapp_img_01.png',
-    description:
-      'WebGL과 3D 요소를 활용하여 개인의 아이덴티티를 표현한 포트폴리오 사이트입니다. 성능 최적화를 위해 텍스처 압축 및 레이지 로딩 기법을 적극 활용했습니다.',
-    role: 'Solo Developer',
-    techStack: ['Three.js', 'React', 'GSAP'],
+    description: 'ERP웹과 연동하여 골프장 운영에 필요한 모든 기능을 제공하는 모바일 앱입니다.',
+    role: 'Frontend Engineer',
+    techStack: ['React', 'TypeScript'],
     span: 'md:col-span-1',
     aspectRatio: 'aspect-[4/4]',
+    detailImages: ['/erpapp/erpapp_img_01.png'],
+    detailSubImges: ['/erpapp/erpapp_img_02.png', '/erpapp/erpapp_img_03.png'],
+    detailTitle: 'ERP 모바일 앱 개발',
+    period: '2023.06 - 현재',
+    team: '프론트엔드 2명, 백엔드 3명',
+    features: [
+      '웹앱 하이브리드 개발',
+      '모바일 친화적 디자인 구현',
+      'ERP 시스템과의 실시간 데이터 동기화',
+    ],
+    kind: 'prod',
   },
   {
     id: 'p4',
-    title: 'League Dashboard',
+    title: 'ERP Global Homepage',
     category: 'Data Visualization',
     year: '2023',
     // Dark data viz vibe
     image: '/erphome/erphome_img_01.jpg',
     description:
-      '실시간 골프 경기 데이터를 시각화하여 보여주는 대시보드입니다. 대량의 데이터를 효과적으로 렌더링하기 위해 가상화 리스트(Virtualization) 기술을 적용했습니다.',
+      '골프장 운영관리의 맞춤형 전용 홈페이지 제공 ERP와 연동된 전용 홈페이지를 통해 실시간 예약, 공지 관리, 회원 관리를 한곳에서 볼 수 있는 사이트입니다.',
     role: 'Frontend Engineer',
-    techStack: ['Next.js', 'D3.js', 'Socket.io'],
+    techStack: ['Nuxt.js', 'TypeScript'],
     span: 'md:col-span-2',
     aspectRatio: 'aspect-[16/9]',
+    detailImages: ['/erphome/erphome_img_01.jpg'],
+    detailSubImges: [
+      '/erphome/erphome_img_02.jpg',
+      '/erphome/erphome_img_03.jpg',
+      '/erphome/erphome_img_04.jpg',
+    ],
+    detailTitle: 'ERP 글로벌 홈페이지 개발',
+    period: '2023.08 - 현재',
+    team: '프론트엔드 2명, 백엔드 4명, 디자이너 1명',
+    features: [
+      'Nuxt.js 기반 SSR/SSG 최적화',
+      '다국어 지원 (i18n) 시스템 구축',
+      'ERP 시스템과의 실시간 데이터 동기화',
+      '모바일 친화적 디자인 구현',
+    ],
+    kind: 'prod',
+  },
+  {
+    id: 'p5',
+    title: '금솔커뮤니케이션 채용 사이트',
+    category: 'Web Development',
+    year: '2020 ~ 2022',
+    image: '/kumsol/kumsol_img_01.png',
+    description:
+      '금솔커뮤니케이션의 채용 사이트를 별도로 개발했습니다. 지원서 작성 시 이메일과 알림톡으로 인사 담당자와 직무 팀장에게 자동 알림이 전송되며, 관리자 페이지를 통해 지원 내역을 확인할 수 있는 시스템을 구축했습니다.',
+    role: 'Full Stack Developer',
+    techStack: ['PHP', 'JavaScript', 'MySQL'],
+    span: 'md:col-span-1',
+    aspectRatio: 'aspect-[4/4]',
+    detailImages: ['/kumsol/kumsol_img_01.png'],
+    detailTitle: '금솔커뮤니케이션 채용 사이트 개발',
+    period: '2020.09 - 2022.04',
+    team: '풀스택 개발자 1명, 디자이너 2명, 기획자 1명',
+    features: [
+      'PHP 기반 채용 지원 시스템 개발',
+      '지원서 작성 및 제출 기능 구현',
+      '이메일 및 알림톡 자동 발송 시스템 구축',
+      '관리자 페이지를 통한 지원 내역 관리',
+      '인사 담당자 및 직무 팀장별 알림 분기 처리',
+    ],
+    kind: 'prod',
+  },
+  {
+    id: 'p6',
+    title: '솔루션뱅크 헬스장 앱',
+    category: 'Mobile Web App',
+    year: '2017 ~ 2020',
+    image: '/solutionbank/spoq_shot_banner.jpg',
+    description:
+      '헬스장에서 사용되는 웹앱 하이브리드 앱입니다. 회원 출입 관리, 수업 스케줄 조회 및 예약, PT 상품 결제 등 헬스장 운영에 필요한 모든 기능을 제공합니다.',
+    role: 'Frontend Developer',
+    techStack: ['PHP', 'Bootstrap', 'JavaScript', 'jQuery'],
+    span: 'md:col-span-1',
+    aspectRatio: 'aspect-[4/4]',
+    detailImages: ['/solutionbank/spoq_shot_5.jpg'],
+    detailSubImges: [
+      '/solutionbank/spoq_shot_7.jpg',
+      '/solutionbank/spoq_shot_4.jpg',
+      '/solutionbank/spoq_shot_6.jpg',
+    ],
+    detailTitle: '솔루션뱅크 헬스장 웹앱 하이브리드 앱 개발',
+    period: '2017.07 - 2020.04',
+    team: '프론트엔드 1명, 백엔드 1명, 퍼블리셔 1명, 디자이너 3명',
+    features: [
+      'PHP 기반 웹앱 하이브리드 개발',
+      'Bootstrap을 활용한 반응형 UI 구현',
+      '회원 출입 관리 시스템 개발',
+      '수업 스케줄 조회 및 예약 기능 구현',
+      'PT 상품 결제 시스템 연동',
+      '전반적인 UI/UX 설계 및 개발',
+    ],
+    kind: 'prod',
   },
 ];
 
@@ -130,3 +242,58 @@ export const OTHER_EXPERIENCE = [
     desc: 'Adobe Certified Associate, SBS 아카데미 웹 인터페이스 과정.',
   },
 ];
+
+export const EXPERIENCE_COMPANIES_DATA: ExperienceCompany[] = [
+  {
+    company: '스마트스코어',
+    role: '프론트팀 매니저',
+    period: '2023.03 ~ 재직중',
+    companyUrl: 'https://www.smartscore.global/kr/tech',
+    responsibilities: [
+      '플랫폼 앱내 신규기능 개발',
+      'Web/Mobile 골프 사용자용 하이브리드 웹앱 개발',
+      'ERP, Back Office 개발',
+    ],
+  },
+  {
+    company: '금솔커뮤니케이션',
+    role: '웹지원팀 대리',
+    period: '2020.09 ~ 2022.04',
+    companyUrl: 'https://www.smartscore.global/kr/tech',
+    responsibilities: [
+      '사내 CRM, CMS, 채용사이트 신규 개발',
+      'Web/Mobile 맞춤형 사이트 템플릿 개발',
+      '30여개 이상 사이트 제작',
+    ],
+  },
+  {
+    company: '솔루션뱅크',
+    role: '기술연구소 대리',
+    period: '2017.07 ~ 2020.04',
+    companyUrl: 'https://www.smartscore.global/kr/tech',
+    responsibilities: [
+      'CRM 고객 관리 고도화',
+      '키오스크 출입 시스템 개발(바코드)',
+      '각 지점별 운영 사이트 개발',
+    ],
+  },
+  {
+    company: '프리랜서',
+    role: '',
+    period: '2022.05 ~ 2023.02',
+    responsibilities: [
+      '서민금흉진흥원 사이트 개발 참여',
+      'BizKt 사이트 개발 참여',
+      '그외 사이트 유지보수 및 신규 개발',
+    ],
+  },
+];
+
+// 섹션 ID 상수 정의 (네비게이션과 일치하도록)
+export const SECTION_IDS = {
+  EXPERIENCE: 'experience',
+  WORK: 'work',
+  CULTURE_FIT: 'culture-fit',
+  INTERVIEW: 'interview',
+  CONTACT: 'contact',
+} as const;

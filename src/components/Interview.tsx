@@ -1,6 +1,8 @@
+import { SECTION_IDS } from '@/constants';
+
 export function Interview() {
   return (
-    <section className="w-full bg-[#F3F4F1] px-6 py-24" id="Inter View">
+    <section className="w-full bg-[#F3F4F1] px-6 py-24" id={SECTION_IDS.INTERVIEW}>
       <div className="mx-auto max-w-[1600px]">
         {/* 헤더 */}
         <div className="mb-20 text-left">

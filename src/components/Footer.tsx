@@ -1,10 +1,11 @@
 import React from 'react';
 import { Github, BookText } from 'lucide-react';
 import Link from 'next/link';
+import { SECTION_IDS } from '@/constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#F3F4F1] py-20 px-6">
+    <footer id={SECTION_IDS.CONTACT} className="bg-[#F3F4F1] py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mt-16 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
           <div>&copy; 2025 Minwook Kang. All rights reserved.</div>

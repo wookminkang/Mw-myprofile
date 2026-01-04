@@ -1,66 +1,39 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { PROJECTS_DATA } from '@/constants';
-import { Project } from '@/types';
-import { ArrowUpRight, X, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { PROJECTS_DATA, SECTION_IDS } from '@/constants';
+import { ProjectWithLayout } from '@/types';
+import { ArrowUpRight, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { Erp } from './Erp';
 import { Platform } from './Platform';
 import { ErpFlatform } from './ErpFlatform';
 import { ErpHome } from './ErpHome';
+import { useBodyLock } from '@/hooks/useBodyLock';
 
 const Work = () => {
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const router = useRouter();
+  const [selectedProject, setSelectedProject] = useState<ProjectWithLayout | null>(null);
 
-  // Lock body scroll when modal is open
-  useEffect(() => {
-    if (selectedProject) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [selectedProject]);
+  useBodyLock(selectedProject !== null);
 
   const handleSetProject = () => {
     setSelectedProject(null);
   };
 
-  const workList = [
-    '인주한방병원',
-    '제임스짐',
-    '건강검진 병원 찾기',
-    '암 요양병원 찾기',
-    '법무사 찾기',
-    '병의원 찾기',
-    '현대미학성형외과',
-    '입원닷컴',
-    '로튜버',
-    '법무법인 로윈',
-    '김용한의원',
-    '금솔커뮤니케이션',
-  ];
+  const handleViewMore = () => {
+    router.push('/work');
+  };
 
   return (
-    <section id="work" className="py-24 bg-[#0a0a0a] text-white relative min-h-screen">
+    <section id={SECTION_IDS.WORK} className="py-24 bg-[#0a0a0a] text-white relative min-h-screen">
       <div className="max-w-[1600px] mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-white/10 pb-12">
           <h2 className="text-6xl md:text-[10rem] font-bold tracking-tighter leading-[0.85] text-white">
             SELECTED <br /> <span className="text-gray-500">WORKS</span>
           </h2>
-          {/* <div className="mt-8 md:mt-0 text-right">
-            <p className="text-gray-400 text-lg md:text-xl max-w-sm font-light leading-relaxed">
-              Logic meets Aesthetics.
-              <br />A collection of digital products crafted with precision.
-            </p>
-            <div className="mt-4 text-sm font-mono text-gray-600">
-              © {new Date().getFullYear()} KANG.DEV
-            </div>
-          </div> */}
         </div>
 
         {/* Masonry-ish Grid */}
@@ -71,7 +44,7 @@ const Work = () => {
               className={`group cursor-pointer relative ${project.span} ${
                 index % 2 === 1 ? 'md:mt-24' : ''
               }`}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => router.push(`/work/${project.id}`)}
             >
               {/* Image Container */}
               <div
@@ -81,12 +54,8 @@ const Work = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    width={2000}
-                    height={900}
-                    style={{
-                      width: '100%',
-                      height: 'auto', // 높이는 비율에 맞춰 자동 조절
-                    }}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110 opacity-80 group-hover:opacity-100"
                   />
                 )}
@@ -116,6 +85,17 @@ const Work = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* 더보기 버튼 */}
+        <div className="mt-24 flex justify-center">
+          <button
+            onClick={handleViewMore}
+            className="group flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/40 rounded-full text-white font-semibold transition-all duration-300 hover:translate-x-2"
+          >
+            <span>더보기</span>
+            <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </button>
         </div>
       </div>
 

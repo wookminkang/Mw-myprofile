@@ -1,10 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Work from '@/components/Work';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
 import Footer from '@/components/Footer';
 import CultureFit from '@/components/CultureFit';
-import { HeroTwo } from '@/components/HeroTwo';
 import { Interview } from '@/components/Interview';
 import { Experience } from '@/components/Experience';
 

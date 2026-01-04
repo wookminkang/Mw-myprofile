@@ -1,27 +1,17 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { SECTION_IDS } from '@/constants';
+import { useScroll } from '@/hooks/useScroll';
+import { scrollToSection } from '@/lib/scroll';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScroll(50);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+  const handleScrollToSection = (id: string) => {
+    scrollToSection(id);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -34,7 +24,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div
             className="text-xl font-bold tracking-tighter uppercase cursor-pointer z-50 not-[mix-blend-difference]"
-            onClick={() => scrollToSection('hero')}
+            onClick={() => handleScrollToSection(SECTION_IDS.EXPERIENCE)}
           >
             KMW<span className="text-[#FF4500]">.</span>
           </div>
@@ -42,31 +32,31 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 text-sm font-medium">
             <button
-              onClick={() => scrollToSection('Experience')}
+              onClick={() => handleScrollToSection(SECTION_IDS.EXPERIENCE)}
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Experience
             </button>
             <button
-              onClick={() => scrollToSection('work')}
+              onClick={() => handleScrollToSection(SECTION_IDS.WORK)}
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Work
             </button>
             <button
-              onClick={() => scrollToSection('Cultuer Fit')}
+              onClick={() => handleScrollToSection(SECTION_IDS.CULTURE_FIT)}
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
-              Cultuer Fit
+              Culture Fit
             </button>
             <button
-              onClick={() => scrollToSection('Inter View')}
+              onClick={() => handleScrollToSection(SECTION_IDS.INTERVIEW)}
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
-              Inter View
+              Interview
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleScrollToSection(SECTION_IDS.CONTACT)}
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Contact
@@ -89,16 +79,34 @@ const Navbar = () => {
         }`}
       >
         <button
-          onClick={() => scrollToSection('work')}
+          onClick={() => handleScrollToSection(SECTION_IDS.EXPERIENCE)}
+          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
+        >
+          EXPERIENCE
+        </button>
+        <button
+          onClick={() => handleScrollToSection(SECTION_IDS.WORK)}
           className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
         >
           WORK
         </button>
         <button
-          onClick={() => scrollToSection('profile')}
+          onClick={() => handleScrollToSection(SECTION_IDS.CULTURE_FIT)}
           className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
         >
-          PROFILE
+          CULTURE FIT
+        </button>
+        <button
+          onClick={() => handleScrollToSection(SECTION_IDS.INTERVIEW)}
+          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
+        >
+          INTERVIEW
+        </button>
+        <button
+          onClick={() => handleScrollToSection(SECTION_IDS.CONTACT)}
+          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
+        >
+          CONTACT
         </button>
       </div>
     </>
