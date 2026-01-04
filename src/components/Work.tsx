@@ -29,6 +29,21 @@ const Work = () => {
     setSelectedProject(null);
   };
 
+  const workList = [
+    '인주한방병원',
+    '제임스짐',
+    '건강검진 병원 찾기',
+    '암 요양병원 찾기',
+    '법무사 찾기',
+    '병의원 찾기',
+    '현대미학성형외과',
+    '입원닷컴',
+    '로튜버',
+    '법무법인 로윈',
+    '김용한의원',
+    '금솔커뮤니케이션',
+  ];
+
   return (
     <section id="work" className="py-24 bg-[#0a0a0a] text-white relative min-h-screen">
       <div className="max-w-[1600px] mx-auto px-6">
@@ -37,7 +52,7 @@ const Work = () => {
           <h2 className="text-6xl md:text-[10rem] font-bold tracking-tighter leading-[0.85] text-white">
             SELECTED <br /> <span className="text-gray-500">WORKS</span>
           </h2>
-          <div className="mt-8 md:mt-0 text-right">
+          {/* <div className="mt-8 md:mt-0 text-right">
             <p className="text-gray-400 text-lg md:text-xl max-w-sm font-light leading-relaxed">
               Logic meets Aesthetics.
               <br />A collection of digital products crafted with precision.
@@ -45,7 +60,7 @@ const Work = () => {
             <div className="mt-4 text-sm font-mono text-gray-600">
               © {new Date().getFullYear()} KANG.DEV
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Masonry-ish Grid */}

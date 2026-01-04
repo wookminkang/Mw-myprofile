@@ -42,6 +42,12 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10 text-sm font-medium">
             <button
+              onClick={() => scrollToSection('Experience')}
+              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
+            >
+              Experience
+            </button>
+            <button
               onClick={() => scrollToSection('work')}
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
@@ -58,12 +64,6 @@ const Navbar = () => {
               className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
             >
               Inter View
-            </button>
-            <button
-              onClick={() => scrollToSection('profile')}
-              className="hover:opacity-60 transition-opacity font-semibold tracking-widest cursor-pointer"
-            >
-              Profile
             </button>
             <button
               onClick={() => scrollToSection('contact')}
@@ -99,12 +99,6 @@ const Navbar = () => {
           className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
         >
           PROFILE
-        </button>
-        <button
-          onClick={() => scrollToSection('contact')}
-          className="text-3xl font-bold text-white hover:opacity-60 cursor-pointer"
-        >
-          CONTACT
         </button>
       </div>
     </>

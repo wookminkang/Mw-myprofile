@@ -1,14 +1,12 @@
-import Image from 'next/image';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
 import Work from '@/components/Work';
 import About from '@/components/About';
-import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
 import Footer from '@/components/Footer';
 import CultureFit from '@/components/CultureFit';
 import { HeroTwo } from '@/components/HeroTwo';
 import { Interview } from '@/components/Interview';
+import { Experience } from '@/components/Experience';
 
 export default function Home() {
   return (
@@ -18,6 +16,7 @@ export default function Home() {
       <main>
         {/* <Hero /> */}
         {/* <HeroTwo /> */}
+        <Experience />
         <Work />
         <CultureFit />
         <Interview />
