@@ -162,7 +162,7 @@ export const PROJECTS_DATA: ProjectWithLayout[] = [
     title: '솔루션뱅크 헬스장 앱',
     category: 'Mobile Web App',
     year: '2017 ~ 2020',
-    image: '/solutionbank/spoq_shot_banner.jpg',
+    image: '/solutionbank/spoq_shot_Banner.jpg',
     description:
       '헬스장에서 사용되는 웹앱 하이브리드 앱입니다. 회원 출입 관리, 수업 스케줄 조회 및 예약, PT 상품 결제 등 헬스장 운영에 필요한 모든 기능을 제공합니다.',
     role: 'Frontend Developer',
