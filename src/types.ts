@@ -43,3 +43,12 @@ export interface ProjectWithLayout extends Project {
   span: string;
   aspectRatio: string;
 }
+
+export interface OtherProject {
+  title: string;
+  description: string;
+  techStack: string[];
+  link?: string;
+  github?: string;
+  year: string;
+}

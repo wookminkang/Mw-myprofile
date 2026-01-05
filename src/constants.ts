@@ -4,6 +4,7 @@ import {
   SkillCategory,
   Project,
   ProjectWithLayout,
+  OtherProject,
 } from './types';
 
 export const INTRO_TEXT = {
@@ -188,6 +189,61 @@ export const PROJECTS_DATA: ProjectWithLayout[] = [
     ],
     kind: 'prod',
   },
+  {
+    id: 'p7',
+    title: '기술 블로그',
+    category: 'Personal Project',
+    year: '2024 ~ 현재',
+    image: '/blog/blog_img_01.png',
+    description:
+      '개발 지식과 경험을 공유하고 기록하기 위한 개인 기술 블로그를 구축했습니다. Next.js와 Supabase를 활용한 풀스택 개발을 진행했으며, Vercel을 통해 배포하여 운영 중입니다. shadcn UI를 이용한 모던한 디자인 시스템, Supabase Authentication 인증, 실시간 데이터베이스 연동, 마크다운 기반 콘텐츠 관리 등 다양한 기술 스택을 활용했습니다.',
+    role: 'Full Stack Developer',
+    techStack: ['Next.js', 'TypeScript', 'shadcn UI', 'Supabase'],
+    span: 'md:col-span-1',
+    aspectRatio: 'aspect-[4/4]',
+    detailImages: ['/blog/blog_img_01.png'],
+    detailTitle: '개인 기술 블로그 개발',
+    period: '2024 - 현재',
+    team: '개인 프로젝트',
+    features: [
+      'Next.js App Router 기반 SSR/SSG 최적화',
+      'TypeScript를 활용한 타입 안정성 확보',
+      'shadcn UI 컴포넌트를 활용한 모던한 디자인 시스템 구축',
+      'Supabase를 통한 실시간 데이터베이스 연동',
+      'Supabase Auth를 활용한 사용자 인증 시스템',
+      '반응형 디자인 및 모바일 최적화',
+      '마크다운 기반 블로그 포스트 작성 및 관리',
+      'SEO 최적화 및 메타 태그 관리',
+    ],
+    kind: '개인',
+  },
+  {
+    id: 'p8',
+    title: '입원닷컴',
+    category: 'Web Development',
+    year: '2020 ~ 2022',
+    image: '/etc/etc_img_01.jpg',
+    description:
+      '전국에 있는 입원치료가 가능한 한방의료기관들이 모여있는 한방 입원치료 네트워크 플랫폼입니다. 지역별, 의료기관별 검색 기능을 제공하며, 사용자가 원하는 한방 입원치료 기관을 쉽게 찾을 수 있도록 구축했습니다.',
+    role: 'Full Stack Developer',
+    techStack: ['PHP', 'JavaScript', 'jQuery'],
+    span: 'md:col-span-2',
+    aspectRatio: 'aspect-[16/9]',
+    detailImages: ['/etc/etc_img_01.jpg'],
+    detailTitle: '입원닷컴 - 한방 입원치료 네트워크 플랫폼 개발',
+    period: '2020.09 - 2022.04',
+    team: '풀스택 개발자 3명, 디자이너 2명, 기획자 1명',
+    features: [
+      'PHP 기반 웹 플랫폼 개발',
+      '전국 한방의료기관 데이터베이스 구축 및 관리',
+      '지역별, 지하철역별, 랜드마크별 검색 기능 구현',
+      'jQuery를 활용한 동적 UI 인터랙션 구현',
+      '의료기관 지도 검색 및 위치 정보 제공',
+      '반응형 웹 디자인 구현',
+      '관리자 페이지를 통한 의료기관 정보 관리 시스템',
+    ],
+    kind: 'prod',
+  },
 ];
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
@@ -287,6 +343,20 @@ export const EXPERIENCE_COMPANIES_DATA: ExperienceCompany[] = [
       '그외 사이트 유지보수 및 신규 개발',
     ],
   },
+];
+
+// 기타 프로젝트 (간단한 리스트 형태로 표시)
+export const OTHER_PROJECTS: OtherProject[] = [
+  // 여기에 추가 프로젝트들을 간단하게 추가하세요
+  // 예시:
+  // {
+  //   title: '프로젝트 이름',
+  //   description: '간단한 설명',
+  //   techStack: ['React', 'TypeScript'],
+  //   link: 'https://example.com',
+  //   github: 'https://github.com/username/repo',
+  //   year: '2024',
+  // },
 ];
 
 // 섹션 ID 상수 정의 (네비게이션과 일치하도록)

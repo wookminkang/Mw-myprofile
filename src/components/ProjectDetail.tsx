@@ -122,14 +122,14 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {project.detailSubImges.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-900"
+                className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-gray-900 border border-white/10"
               >
                 <Image
                   src={image}
                   alt={`${project.title} - ${index + 1}`}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
             ))}

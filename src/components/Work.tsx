@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { PROJECTS_DATA, SECTION_IDS } from '@/constants';
+import { PROJECTS_DATA, OTHER_PROJECTS, SECTION_IDS } from '@/constants';
 import { ProjectWithLayout } from '@/types';
 import { ArrowUpRight, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
@@ -11,6 +11,7 @@ import { Platform } from './Platform';
 import { ErpFlatform } from './ErpFlatform';
 import { ErpHome } from './ErpHome';
 import { useBodyLock } from '@/hooks/useBodyLock';
+import OtherProjects from './OtherProjects';
 
 const Work = () => {
   const router = useRouter();
@@ -97,6 +98,9 @@ const Work = () => {
             <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
         </div>
+
+        {/* 기타 프로젝트 섹션 */}
+        {OTHER_PROJECTS.length > 0 && <OtherProjects projects={OTHER_PROJECTS} />}
       </div>
 
       {/* Detail Overlay (Modal) */}
