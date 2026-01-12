@@ -367,7 +367,7 @@ export const EXPERIENCE_COMPANIES_DATA: ExperienceCompany[] = [
     ],
   },
   {
-    company: '프리랜서',ㄴ
+    company: '프리랜서',
     role: '',
     period: '2022.05 ~ 2023.02',
     responsibilities: [
