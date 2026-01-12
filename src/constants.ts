@@ -112,7 +112,7 @@ export const PROJECTS_DATA: ProjectWithLayout[] = [
     description:
       '스마트스코어 ERP를 위한 통합 디자인 시스템을 설계 및 구축했습니다. 디자인 토큰 기반의 테마 시스템으로 일관된 사용자 경험을 제공합니다. 재사용 가능한 UI 컴포넌트 아키텍처를 설계하고 문서화하여 팀 전체의 개발 효율성을 높였습니다.',
     role: 'Frontend Engineer & Design System Architect',
-    techStack: ['Vue3', 'TypeScript', 'Storybook', 'Design Tokens'],
+    techStack: ['React', 'TypeScript', 'Design Tokens'],
     span: 'md:col-span-1',
     aspectRatio: 'aspect-[4/4]',
     detailImages: ['/ssds/sds_img_01.png'],
