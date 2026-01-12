@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { ProjectWithLayout } from '@/types';
 import Image from 'next/image';
+import { ArrowLeft } from 'lucide-react';
 
 interface WorkListProps {
   projects: ProjectWithLayout[];
@@ -15,6 +16,13 @@ export default function WorkList({ projects, selectedId }: WorkListProps) {
   return (
     <div className="p-6">
       <div className="mb-8">
+        <button
+          onClick={() => router.push('/')}
+          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-6 group cursor-pointer"
+        >
+          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+          <span className="text-md font-medium">홈으로 돌아가기</span>
+        </button>
         <h1 className="text-4xl font-bold mb-2">Projects</h1>
         <p className="text-gray-400">프로젝트를 선택하여 상세 정보를 확인하세요</p>
       </div>
@@ -38,7 +46,7 @@ export default function WorkList({ projects, selectedId }: WorkListProps) {
             >
               <div className="flex items-start gap-4">
                 {/* 프로젝트 아이콘/이미지 */}
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-800 flex-shrink-0">
+                <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-800 shrink-0">
                   {project.image && (
                     <Image
                       src={project.image}
@@ -58,7 +66,7 @@ export default function WorkList({ projects, selectedId }: WorkListProps) {
                     </h3>
                     <span
                       className={`
-                        text-xs px-2 py-1 rounded-full font-medium flex-shrink-0
+                        text-xs px-2 py-1 rounded-full font-medium shrink-0
                         ${
                           isSelected
                             ? 'bg-green-500/20 text-green-400'

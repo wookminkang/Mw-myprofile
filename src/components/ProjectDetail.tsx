@@ -21,10 +21,10 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
       {/* 닫기 버튼 */}
       <button
         onClick={handleClose}
-        className="fixed lg:absolute top-4 right-4 lg:top-6 lg:right-6 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 lg:bg-white/10 backdrop-blur-sm hover:bg-white/20 border border-white/20 transition-all duration-300"
+        className="fixed cursor-pointer lg:absolute top-4 right-4 lg:top-8 lg:right-8 z-20 w-14 h-14 flex items-center justify-center rounded-full bg-black/60 lg:bg-[#FF4500]/10 backdrop-blur-md border border-white/20 text-white hover:bg-[#FF4500] hover:border-[#FF4500] hover:scale-110 shadow-lg shadow-[#FF4500]/20 transition-all duration-300 animate-float"
         aria-label="닫기"
       >
-        <X className="w-5 h-5 text-white" />
+        <X className="w-6 h-6 text-white" />
       </button>
 
       <div className="px-4 py-6 sm:px-6 sm:py-8 lg:p-12 pb-20 lg:pb-12">
@@ -51,7 +51,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           {project.period && (
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
               <span className="text-gray-400 text-sm">기간:</span>
-              <span className="text-white font-medium text-sm sm:text-base break-words">
+              <span className="text-white font-medium text-sm sm:text-base wrap-break-word">
                 {project.period}
               </span>
             </div>
@@ -60,7 +60,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           {project.team && (
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
               <span className="text-gray-400 text-sm">팀 구성:</span>
-              <span className="text-white font-medium text-sm sm:text-base break-words">
+              <span className="text-white font-medium text-sm sm:text-base wrap-break-word">
                 {project.team}
               </span>
             </div>
@@ -91,7 +91,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             <ul className="space-y-2 sm:space-y-3">
               {project.features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-2 sm:gap-3">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0 mt-0.5 sm:mt-0.5" />
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 shrink-0 mt-0.5 sm:mt-0.5" />
                   <span className="text-gray-300 text-sm sm:text-base">{feature}</span>
                 </li>
               ))}
@@ -122,7 +122,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             {project.detailSubImges.map((image, index) => (
               <div
                 key={index}
-                className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-gray-900 border border-white/10"
+                className="relative w-full aspect-16/10 rounded-xl overflow-hidden bg-gray-900 border border-white/10"
               >
                 <Image
                   src={image}

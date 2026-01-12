@@ -121,7 +121,7 @@ export const PROJECTS_DATA: ProjectWithLayout[] = [
       '/ssds/sds_img_03.png',
       '/ssds/sds_img_04.png',
       '/ssds/sds_img_05.png',
-      '/ssds/sds_img_06.png',그
+      '/ssds/sds_img_06.png',
     ],
     detailTitle: 'SmartScore Design System (SDS) 구축',
     period: '2023.03 - 현재',
