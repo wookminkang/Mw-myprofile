@@ -121,7 +121,7 @@ export const PROJECTS_DATA: ProjectWithLayout[] = [
       '/ssds/sds_img_03.png',
       '/ssds/sds_img_04.png',
       '/ssds/sds_img_05.png',
-      '/ssds/sds_img_06.png',
+      '/ssds/sds_img_06.png',그
     ],
     detailTitle: 'SmartScore Design System (SDS) 구축',
     period: '2023.03 - 현재',
@@ -367,11 +367,11 @@ export const EXPERIENCE_COMPANIES_DATA: ExperienceCompany[] = [
     ],
   },
   {
-    company: '프리랜서',
+    company: '프리랜서',ㄴ
     role: '',
     period: '2022.05 ~ 2023.02',
     responsibilities: [
-      '서민금흉진흥원 사이트 개발 참여',
+      '서민금융진응원 사이트 개발 참여',
       'BizKt 사이트 개발 참여',
       '그외 사이트 유지보수 및 신규 개발',
     ],
